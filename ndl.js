@@ -1,19 +1,11 @@
-import init, { sample_no_deco } from './pkg/capra_bindgen.js';
+const neon = require('capra-neon');
 
-async function run() {
-    await init();
+document.addEventListener("DOMContentLoaded", function() {
+    let depth = 20;
+    let time = 0;
 
-    const result = sample_no_deco();
-    document.addEventListener("DOMContentLoaded", function() {
-        const body = document.body;
-        const p = document.createElement("p");
-        p.textContent = "wuuuuu";
-        const p_again = document.createElement("p");
-        p.textContent = "Yoooooo";
-        body.appendChild(p);
-        body.appendChild(p_again)
-    });
-
-}
-
-run();
+    const body = document.body;
+    const h = document.createElement("h1");
+    h.textContent = "NDL Dive at " + depth + "m has NDL: " + neon.ndlDemo(depth, time) + "mins";
+    body.appendChild(h);
+});
