@@ -1,7 +1,4 @@
 const { app, BrowserWindow } = require('electron');
-//import * as wasm from "capra-bindgen"
-
-const wasm = require('capra-bindgen');
 
 function createWindow () {
     // Create the browser window.
@@ -11,13 +8,13 @@ function createWindow () {
         webPreferences: {
             nodeIntegration: true
         }
-    })
+    });
 
     // and load the index.html of the app.
-    win.loadFile('index.html')
+    win.loadFile('index.html');
 
     // Open the DevTools.
-    win.webContents.openDevTools()
+    win.webContents.openDevTools();
 }
 
 // This method will be called when Electron has finished
