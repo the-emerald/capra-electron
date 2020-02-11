@@ -21,17 +21,86 @@
 <body>
 <div id="container" class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-            <h3 class="inputs">Dive parameters</h3>
-            <label for="depth-input"></label><textarea rows="1" id="depth-input" class="form-control text-input" placeholder="Depth of dive..."></textarea>
-            <label for="length-input"></label><textarea rows="1" id="length-input" class="form-control text-input" placeholder="Length of dive..."></textarea>
+        <div class="col-lg-4">
+            <h4 class="btm">Bottom time</h4>
+                <label for="bottom-depth-input"></label><input type="number" min="0" id="bottom-depth-input" class="form-control"
+                                                               placeholder="Bottom depth (m)"/>
+                <label for="bottom-time-input"></label><input type="number" min="0" id="bottom-time-input" class="form-control"
+                                                           placeholder="Bottom time (min)"/>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="bottom-o2-input"></label><input type="number" min="0" id="bottom-o2-input" class="form-control"
+                                                                  placeholder="O2 mix"/>
+                </div>
+                <div class="col-md-6">
+                    <label for="bottom-he-input"></label><input type="number" min="0" id="bottom-he-input" class="form-control"
+                                                                placeholder="He mix"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="gfl-input"></label><textarea rows="1" id="gfl-input" class="form-control text-input" placeholder="GFL%"></textarea>
+                </div>
+                <div class="col-md-6">
+                    <label for="gfh-input"></label><textarea rows="1" id="gfh-input" class="form-control text-input" placeholder="GFH%"></textarea>
+                </div>
+            </div>
             <br>
-            <button type="button" id="submit" class="btn btn-primary">Calculate</button>
+            <button type="button" id="calculate-dive" class="btn btn-primary">Calculate</button>
+        </div>
+
+        <div class="col-lg-4">
+            <h4 class="inputs">Deco mixes</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="deco-1-o2-input"></label><input type="number" min="0" id="deco-1-o2-input" class="form-control"
+                                                                placeholder="O2 mix"/>
+                </div>
+                <div class="col-md-6">
+                    <label for="deco-1-he-input"></label><input type="number" min="0" id="deco-1-he-input" class="form-control"
+                                                                placeholder="He mix"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="deco-2-o2-input"></label><input type="number" min="0" id="deco-2-o2-input" class="form-control"
+                                                                placeholder="O2 mix"/>
+                </div>
+                <div class="col-md-6">
+                    <label for="deco-2-he-input"></label><input type="number" min="0" id="deco-2-he-input" class="form-control"
+                                                                placeholder="He mix"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="deco-3-o2-input"></label><input type="number" min="0" id="deco-3-o2-input" class="form-control"
+                                                                placeholder="O2 mix"/>
+                </div>
+                <div class="col-md-6">
+                    <label for="deco-3-he-input"></label><input type="number" min="0" id="deco-3-he-input" class="form-control"
+                                                                placeholder="He mix"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="deco-4-o2-input"></label><input type="number" min="0" id="deco-4-o2-input" class="form-control"
+                                                                placeholder="O2 mix"/>
+                </div>
+                <div class="col-md-6">
+                    <label for="deco-4-he-input"></label><input type="number" min="0" id="deco-4-he-input" class="form-control"
+                                                                placeholder="He mix"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <h4>Placeholder</h4>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h3 class="ndl-heading">NDL Remaining:</h3>
+            <h3 class="ndl-heading">Decompression schedule:</h3>
             <pre id="ndl-output" class="ndl-output"> </pre>
         </div>
     </div>

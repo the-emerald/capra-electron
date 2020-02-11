@@ -17,3 +17,7 @@ html, body, .container-fluid {
     color: #575B5E;
     font-weight: normal;
 }
+
+textarea {
+    resize: none;
+}
