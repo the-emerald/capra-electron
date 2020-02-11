@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const body = document.body;
     const h = document.createElement("h1");
-    h.textContent = "NDL Dive at " + depth + "m has NDL: " + neon.ndlDemo(depth, time) + "mins";
+    h.textContent = "Dive at " + depth + "m has NDL: " + neon.ndlDemo(depth, time) + "mins";
     body.appendChild(h);
 });
