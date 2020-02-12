@@ -4,10 +4,10 @@
   "private": true,
   "main": "src/start.js",
   "dependencies": {
+    "7zip-bin": "^5.0.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "electron": "^8.0.0",
     "electron-is-dev": "^1.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -38,11 +38,11 @@
     ]
   },
   "devDependencies": {
+    "electron": "^8.0.0",
     "electron-builder": "^22.3.2",
     "electron-reload": "^1.5.0",
     "nodemon": "^2.0.2"
   },
-
   "build": {
     "appId": "your.id",
     "mac": {
